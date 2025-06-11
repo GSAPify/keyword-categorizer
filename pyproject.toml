@@ -1,0 +1,11 @@
+[project]
+name = "keyword-categorizer"
+version = "0.1.0"
+description = "AI-powered keyword categorization by country/language"
+requires-python = ">=3.8"
+dependencies = [
+    "openai>=1.0.0",
+]
+
+[tool.uv]
+dev-dependencies = [] 
