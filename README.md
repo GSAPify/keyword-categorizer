@@ -71,7 +71,6 @@ The system expects a CSV file (`Global keywords list.csv`) with the following co
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
    cd keyword-categorizer
    ```
 
