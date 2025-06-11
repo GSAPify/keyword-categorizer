@@ -160,10 +160,4 @@ The system uses OpenAI's Chat Completions API with:
 4. Test thoroughly
 5. Submit a pull request
 
-## License
 
-[Add your license information here]
-
-## Support
-
-For issues or questions, please [create an issue](link-to-issues) in the repository. 
