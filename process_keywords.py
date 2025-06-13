@@ -11,30 +11,33 @@ load_dotenv()
 class KeywordProcessor:
     def __init__(self):
         self.brain_api_key = os.getenv('BRAIN_API_KEY')
-        self.brain_api_url = os.getenv('BRAIN_API_URL', 'https://api.brain.com/v1')  # Replace with actual API URL
+        self.brain_api_url = os.getenv('BRAIN_API_URL', 'https://brain-platform.pattern.com/api/v1/llms/invoke')  
         self.headers = {
             'Authorization': f'Bearer {self.brain_api_key}',
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
         }
 
     def read_keywords(self, file_path: str) -> pd.DataFrame:
         """Read the keywords CSV file"""
         return pd.read_csv(file_path)
 
-    def process_with_brain_api(self, keyword: str, reason: str) -> Dict[str, Any]:
+    def process_with_brain_api(self, keyword: str, reason: str) -> dict:
         """Process keyword with Brain API"""
         try:
+            prompt = f"Keyword: {keyword}\nReason: {reason}"
             payload = {
-                'keyword': keyword,
-                'context': reason
+                "prompt": prompt,
+                "model": "gpt-4.1"  
             }
             response = requests.post(
-                f'{self.brain_api_url}/analyze',
+                self.brain_api_url,
                 headers=self.headers,
-                json=payload
+                data=json.dumps(payload)
             )
             response.raise_for_status()
-            return response.json()
+            # The Brain API returns the result in ['response']
+            return {"response": response.json().get('response', '')}
         except Exception as e:
             print(f"Error processing keyword {keyword}: {str(e)}")
             return {}
