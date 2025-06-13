@@ -71,7 +71,6 @@ The system expects a CSV file (`Global keywords list.csv`) with the following co
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
    cd keyword-categorizer
    ```
 
@@ -160,10 +159,4 @@ The system uses OpenAI's Chat Completions API with:
 4. Test thoroughly
 5. Submit a pull request
 
-## License
 
-[Add your license information here]
-
-## Support
-
-For issues or questions, please [create an issue](link-to-issues) in the repository. 
