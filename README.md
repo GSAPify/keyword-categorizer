@@ -127,12 +127,5 @@ The system processes:
 4. Push to the branch
 5. Create a new Pull Request
 
-## License
-
-[Your License Here]
-
-## Contact
-
-[Your Contact Information]
 
 
