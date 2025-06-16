@@ -1,4 +1,4 @@
-Keyword,Reason-to_Flag,Country_Code,Valid_Country_Codes,Country,Compliance _Region
+Keyword,Reason_to_Flag,Country_Code,Valid_Country_Codes,Country,Compliance _Region
 14500,Prohibited cylindrical lithium ion cell battery type (Restricted products > Electronics),ALL,US,United States,NA
 16340,Prohibited cylindrical lithium ion cell battery type (Restricted products > Electronics),ALL,CA,Canada,NA
 18650,Prohibited cylindrical lithium ion cell battery type (Restricted products > Electronics),ALL,UK,United Kingdom,EU

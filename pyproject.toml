@@ -2,8 +2,9 @@
 name = "keyword-categorizer"
 version = "0.1.0"
 description = "AI-powered keyword categorization by country/language"
-requires-python = ">=3.8"
+requires-python = ">=3.12"
 dependencies = [
+    "brain-platform-client",
     "dotenv>=0.9.9",
     "pandas>=2.0.0",
     "python-dotenv>=1.0.0",
@@ -12,3 +13,6 @@ dependencies = [
 
 [tool.uv]
 dev-dependencies = [] 
+
+[tool.uv.sources]
+brain-platform-client = { git = "https://github.com/patterninc/brain-platform-client.git", rev = "v1.3.14" }
